@@ -49,8 +49,8 @@ const App = () => {
         <p>Il va falloir modifier le code pour faire un vrai blind test !!!</p>
       </div>
       <div className="App-buttons"></div>
-      <AlbumCover track={tracks[trackIndex].track.album.images[0].url} />
-      <audio src={trackUrls[trackIndex]} autoPlay controls />
+      <AlbumCover track={tracks[trackIndex]?.track.album.images[0].url} />
+      <audio src={tracks[trackIndex]?.track.preview_url} autoPlay controls />
       <button onClick={goToNextTrack}>Next track</button>
 
       <div> {trackIndex} </div>
